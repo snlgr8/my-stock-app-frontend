@@ -1,17 +1,18 @@
-import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import './App.css';
-import Header from './components/header/Header';
-import SignInSignUp from './pages/signIn-signUp.component';
-import { getCategories, addCategory } from './services/categories.service';
+import { useEffect, useState } from "react";
+import styled from "styled-components";
+import "./App.css";
+import Header from "./components/header/Header";
+import SignInSignUp from "./pages/signIn-signUp";
+import { getCategories, addCategory } from "./services/categories.service";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(null);
 
   useEffect(() => {
-    getCategories();
+    //getCategories();
     //addCategory({ name: 'Sample', icon: 'sample', subtype: ['abc'] });
   }, []);
+
   return (
     <AppContainer>
       <Header />
